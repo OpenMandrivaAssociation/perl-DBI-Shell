@@ -17,7 +17,6 @@ BuildRequires:	perl-devel
 BuildRequires:	perl-IO-Tee
 BuildRequires:  perl-DBI
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The DBI::Shell module (and dbish command, if installed) provide a simple but
