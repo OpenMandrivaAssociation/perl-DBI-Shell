@@ -1,7 +1,7 @@
 %define module	DBI-Shell
 %define name	perl-%{module}
 %define version 11.95
-%define release %mkrel 1
+%define release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
