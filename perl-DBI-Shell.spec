@@ -1,23 +1,23 @@
-%define module	DBI-Shell
-%define name	perl-%{module}
-%define version 11.95
-%define release %mkrel 3
+%define upstream_name	 DBI-Shell
+%define upstream_version 11.95
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Interactive command shell for the DBI 
 License:	GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://search.cpan.org/CPAN/authors/id/T/TL/TLOWERY/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/T/TL/TLOWERY/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildRequires:	perl-IO-Tee
 BuildRequires:  perl-DBI
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The DBI::Shell module (and dbish command, if installed) provide a simple but
@@ -27,7 +27,7 @@ DBI::Shell is very new, very experimental and very subject to change. Your
 mileage will vary. Interfaces will change with each release.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod 644 Changes README ToDo
 find lib -type f -exec chmod 644 {} \;
 
@@ -51,4 +51,3 @@ rm -rf %{buildroot}
 %{_bindir}/dbish
 %{_mandir}/*/*
 %{perl_vendorlib}/DBI
-
