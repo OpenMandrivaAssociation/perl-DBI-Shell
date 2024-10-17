@@ -8,7 +8,7 @@ Release:	5
 Summary:	Interactive command shell for the DBI 
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/T/TL/TLOWERY/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
