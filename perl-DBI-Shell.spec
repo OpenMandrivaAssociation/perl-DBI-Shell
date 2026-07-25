@@ -1,15 +1,15 @@
 %define upstream_name	 DBI-Shell
-%define upstream_version 11.95
+%define upstream_version 11.98
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Interactive command shell for the DBI 
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/T/TL/TLOWERY/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://repo.or.cz/perl-DBI-Shell
+Source0:	https://cpan.metacpan.org/authors/id/D/DL/DLAMBLEY/DBI-Shell-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
