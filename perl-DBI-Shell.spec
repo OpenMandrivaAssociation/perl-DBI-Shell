@@ -1,15 +1,13 @@
 %define upstream_name	 DBI-Shell
-%define upstream_version 11.98
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	11.98
+Release:	2
 
 Summary:	Interactive command shell for the DBI 
 License:	GPL
 Group:		Development/Perl
 Url:		https://repo.or.cz/perl-DBI-Shell
-Source0:	https://cpan.metacpan.org/authors/id/D/DL/DLAMBLEY/DBI-Shell-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DL/DLAMBLEY/DBI-Shell-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,7 +23,7 @@ DBI::Shell is very new, very experimental and very subject to change. Your
 mileage will vary. Interfaces will change with each release.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 chmod 644 Changes README ToDo
 find lib -type f -exec chmod 644 {} \;
 
@@ -53,9 +51,7 @@ make test
 
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 11.950.0-1mdv2011.0
 + Revision: 403095
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 11.95-3mdv2009.0
+- rebuild using %11.98 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 11.95-3mdv2009.0
 + Revision: 256569
 - rebuild
 
